@@ -1343,8 +1343,8 @@ string CommandLineFlagParser::ProcessOptionsFromStringLocked(
             || fnmatch(glob.c_str(), ProgramInvocationName(),      FNM_PATHNAME) == 0
             || fnmatch(glob.c_str(), ProgramInvocationShortName(), FNM_PATHNAME) == 0
 #elif defined(HAVE_SHLWAPI_H)
-            || PathMatchSpecA(glob.c_str(), ProgramInvocationName())
-            || PathMatchSpecA(glob.c_str(), ProgramInvocationShortName())
+            //|| PathMatchSpecA(glob.c_str(), ProgramInvocationName())
+            //|| PathMatchSpecA(glob.c_str(), ProgramInvocationShortName())
 #endif
             ) {
           flags_are_relevant = true;
